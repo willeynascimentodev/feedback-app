@@ -1,11 +1,14 @@
 import Header from "./components/Header"
+import FeedbackItem from './components/FeedbackItem'
 import PropTypes from 'prop-types'
+
 function App () {
+
     return (
         <>
             <Header text="Feedback UI" />
             <div className="container" >
-                <h1>My App</h1>
+                <FeedbackItem />
             </div>
         </>
     )
