@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header"
+import PropTypes from 'prop-types'
+function App () {
+    return (
+        <>
+            <Header text="Feedback UI" />
+            <div className="container" >
+                <h1>My App</h1>
+            </div>
+        </>
+    )
+}
+Header.defaultProps = {
+    text: 'Feedback UI',
+    bgColor: 'rgba(0,0,0,0.4)',
+    color: '#ff6a95'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+}
+Header.propTypes = {
+    text: PropTypes.string,
+    bgColor: PropTypes.string,
+    color: PropTypes.string
 }
 
-export default App;
+export default App
