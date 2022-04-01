@@ -8,6 +8,7 @@ import FeedbackStats from "./components/FeedbackStats"
 import FeedbackList from './components/FeedbackList'
 import AboutPage from './pages/AboutPage'
 import { v4 as uuidv4 } from 'uuid'
+import AboutIconLink from './components/AboutIconLink'
 
 function App () {
     const [feedback, setFeedback] = useState(FeedbackData)
@@ -34,12 +35,15 @@ function App () {
                             <FeedbackForm handleAdd={ addFeedback }  />
                             <FeedbackStats feedback={ feedback }/>
                             <FeedbackList feedback={ feedback } handleDelete={ deleteFeedback }/>
+                            <AboutIconLink />
                         </>
                     }>
                         
                     </Route>
                     
                     <Route path='/about' element={ <AboutPage/> }/>
+                    
+
                 </Routes>
             </div>
         </Router>
